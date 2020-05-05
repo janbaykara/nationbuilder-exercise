@@ -13,6 +13,9 @@ export default () => {
           We design digital tools for grassroots activists that makes radical
           change possible.
         </p>
+        <p>
+          See the source code on <a href="https://github.com/janbaykara/nationbuilder-exercise"><b>GitHub</b></a>.
+        </p>
       </header>
 
       <section style={{ margin: '80px 0px' }}>

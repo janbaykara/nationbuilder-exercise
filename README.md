@@ -1,5 +1,7 @@
 # Nationbuilder exercise
 
+See it in action at [nationbuilder-exercise.now.sh](https://nationbuilder-exercise.now.sh/).
+
 ### How to run this locally
 
 1. Copy [`.env.template`](./.env.template) to `.env` and add the Nationbuilder credentials
