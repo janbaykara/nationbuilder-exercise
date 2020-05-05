@@ -1,42 +1,14 @@
-# Hello World example
+# Nationbuilder exercise
 
-This example shows the most basic idea behind Next. We have 2 pages: `pages/index.js` and `pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities. The `day` directory shows that you can have subdirectories.
+### How to run this locally
 
-## Deploy your own
+1. Copy [`.env.template`](./.env.template) to `.env` and add the Nationbuilder credentials
+2. `yarn` in directory to install dependencies
+3. `yarn dev` to start dev server
+4. Visit [http://localhost:3000](http://localhost:3000) for a demo of the development tasks
 
-Deploy the example using [ZEIT Now](https://zeit.co/now):
+### Inspecting the code
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/zeit/next.js/tree/canary/examples/hello-world)
-
-## How to use
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npm init next-app --example hello-world hello-world-app
-# or
-yarn create next-app --example hello-world hello-world-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/hello-world
-cd hello-world
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
-
-Deploy it to the cloud with [ZEIT Now](https://zeit.co/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- **[lib/nationbuilder.ts](./lib/nationbuilder.ts)** for code that interacts directly with Nationbuilder's REST API
+- **[pages/api](./pages/api)** for the serverless function definitions which consume these Nationbuilder helpers
+- **[components/exercises](./components/exercises)** to see the shape of data that passes through to the serverless functions
