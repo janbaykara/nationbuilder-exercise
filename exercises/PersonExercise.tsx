@@ -70,7 +70,6 @@ export const UpdatePersonTask: FC<{
     if (!person) return
     const gender = sample(['M', 'F', 'O'] as Array<Person['gender']>)
     const updatedPerson = merge({} as Person, person, { gender })
-    query.run()
     query.run({ body: JSON.stringify({
       id: updatedPerson.id,
       person: updatedPerson
@@ -98,7 +97,6 @@ export const DeletePersonTask: FC<{
 
   const deletePerson = () => {
     if (!person) return
-    query.run()
     query.run({ body: JSON.stringify({ id: person.id }) })
     onChange()
   }
